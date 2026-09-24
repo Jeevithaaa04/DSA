@@ -5,16 +5,16 @@ using namespace std;
 class Solution {
 public:
     int removeDuplicates(vector<int>& nums) {
-        int j = 0;
+        int j=0;
 
-        for(int i = 1; i < nums.size(); i++) {
-            if(nums[i] != nums[j]) {
+        for(int i=1;i<nums.size();i++) {
+            if(nums[i]!=nums[j]) {
                 j++;
-                nums[j] = nums[i];
+                nums[j]=nums[i];
             }
         }
 
-        return j + 1;
+        return j+1;
     }
 };
 
@@ -24,14 +24,14 @@ int main() {
 
     Solution obj;
 
-    int k = obj.removeDuplicates(nums);
+    int k =obj.removeDuplicates(nums);
 
-    cout << "Number of unique elements: " << k << endl;
+    cout<<"No of unique elements: " << k << endl;
 
-    cout << "Array after removing duplicates: ";
+    cout<<"Array after removing duplicates: ";
 
-    for(int i = 0; i < k; i++) {
-        cout << nums[i] << " ";
+    for(int i=0;i<k;i++) {
+        cout<<nums[i] << " ";
     }
 
     return 0;
